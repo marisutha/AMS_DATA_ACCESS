@@ -1,0 +1,61 @@
+{
+    "CreateCategoryData": {
+        "data": {
+            "CategoryID": 1,
+            "CategoryName": "Laptop",
+            "CategoryCode": "CAT001",
+            "CreatedBy": "admin",
+            "CreatedDate": "2023-11-03T05:52:49.864Z",
+            "IsDeleted": false
+        },
+        "status": 200,
+        "message": "[MOCK] Category has been created successfully"
+    },
+    "ReadCategoryData": {
+        "data": [
+            {
+                "CategoryID": 1,
+                "CategoryName": "Laptop",
+                "CategoryCode": "CAT001",
+                "CreatedBy": "admin",
+                "CreatedDate": "2023-11-03T05:52:49.864Z",
+                "IsDeleted": false,
+                "ModifiedBy": "admin",
+                "ModifiedDate": "2023-12-01T00:00:00.000Z"
+            },
+            {
+                "CategoryID": 2,
+                "CategoryName": "System",
+                "CategoryCode": "CAT002",
+                "CreatedBy": "admin",
+                "CreatedDate": "2023-11-03T05:52:49.864Z",
+                "IsDeleted": false,
+                "ModifiedBy": "admin",
+                "ModifiedDate": "2023-12-01T00:00:00.000Z"
+            }
+        ],
+        "status": 200,
+        "message": "[MOCK] Categories have been read successfully"
+    },
+    "UpdateCategoryData": {
+        "data": {
+            "count": 1
+        },
+        "status": 200,
+        "message": "Category updated successfully"
+    },
+    "RemoveCategoryData": {
+        "data": {
+            "count": 1
+        },
+        "status": 200,
+        "message": "[MOCK] Category has been removed successfully"
+    },
+    "MetricCategoryData": {
+        "data": {
+            "TotalCategory": 10
+        },
+        "status": 200,
+        "message": "[MOCK] Category Metric has been read successfully"
+    }
+}

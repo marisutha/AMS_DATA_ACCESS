@@ -1,0 +1,63 @@
+{
+    "CreateLocationData": {
+        "data": {
+            "LocationID": 1,
+            "LocationName": "Head Office",
+            "LocationCode": "LOC001",
+            "CreatedBy": "admin",
+            "CreatedDate": "2023-12-01T12:00:00Z",
+            "IsDeleted": false,
+            "ModifiedBy": null,
+            "ModifiedDate": null
+        },
+        "status": 200,
+        "message": "[Mock] Location created successfully"
+    },
+    "ReadLocationData": {
+        "data": [
+            {
+                "LocationID": 1,
+                "LocationName": "Head Office",
+                "LocationCode": "LOC001",
+                "CreatedBy": "admin",
+                "CreatedDate": "2023-12-01T12:00:00Z",
+                "IsDeleted": false,
+                "ModifiedBy": null,
+                "ModifiedDate": null
+            },
+            {
+                "LocationID": 2,
+                "LocationName": "Branch Office",
+                "LocationCode": "LOC002",
+                "CreatedBy": "user1",
+                "CreatedDate": "2024-01-01T08:00:00Z",
+                "IsDeleted": false,
+                "ModifiedBy": "admin",
+                "ModifiedDate": "2024-01-15T10:00:00Z"
+            }
+        ],
+        "status": 200,
+        "message": "[Mock] Locations fetched successfully"
+    },
+    "UpdateLocationData": {
+        "data": {
+            "count": 1
+        },
+        "status": 200,
+        "message": "[MOck] Locations updated successfully"
+    },
+    "RemoveLocationData": {
+        "data": {
+            "count": 1
+        },
+        "status": 200,
+        "message": "[Mock] Locations removed successfully"
+    },
+    "MetricLocationData": {
+        "data": {
+            "TotalLocation": 10
+        },
+        "status": 200,
+        "message": "[MOCK] Location Metric has been read successfully"
+    }
+}

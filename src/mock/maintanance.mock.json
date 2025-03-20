@@ -1,0 +1,89 @@
+{
+    "CreateAssetMaintenanceData": {
+        "data": {
+            "MaintenanceId": 1,
+            "AssetID": 1,
+            "AssetName": "Laptop",
+            "Model": "Dell Inspiron",
+            "UserID": 1,
+            "Issue": "Battery issue",
+            "ResolvedStatus": null,
+            "StartDate": "2024-01-01T08:00:00Z",
+            "EndDate": null,
+            "Status": "In Progress",
+            "Description": "Battery replacement required",
+            "CreatedBy": "user1",
+            "CreatedDate": "2024-01-01T08:00:00Z",
+            "IsDeleted": false,
+            "ModifiedBy": null,
+            "ModifiedDate": null
+        },
+        "status": 200,
+        "message": "[Mock] Asset maintenance record created successfully"
+    },
+    "ReadAssetMaintenanceData": {
+        "data": [
+            {
+                "MaintenanceId": 1,
+                "AssetID": 1,
+                "AssetName": "Laptop",
+                "Model": "Dell Inspiron",
+                "UserID": 1,
+                "Issue": "Battery issue",
+                "ResolvedStatus": null,
+                "StartDate": "2024-01-01T08:00:00Z",
+                "EndDate": null,
+                "Status": "In Progress",
+                "Description": "Battery replacement required",
+                "CreatedBy": "user1",
+                "CreatedDate": "2024-01-01T08:00:00Z",
+                "IsDeleted": false,
+                "ModifiedBy": null,
+                "ModifiedDate": null
+            },
+            {
+                "MaintenanceId": 2,
+                "AssetID": 2,
+                "AssetName": "Laptop",
+                "Model": "Dell Inspiron",
+                "UserID": 2,
+                "Issue": "Battery issue",
+                "ResolvedStatus": null,
+                "StartDate": "2024-01-01T08:00:00Z",
+                "EndDate": null,
+                "Status": "In Progress",
+                "Description": "Battery replacement required",
+                "CreatedBy": "user1",
+                "CreatedDate": "2024-01-01T08:00:00Z",
+                "IsDeleted": false,
+                "ModifiedBy": null,
+                "ModifiedDate": null
+            }
+        ],
+        "status": 200,
+        "message": "[Mock] Asset maintenance records readed successfully"
+    },
+    "UpdateAssetMaintenanceData": {
+        "data": {
+            "count": 1
+        },
+        "status": 200,
+        "message": "[Mock] Asset maintenance record updated successfully"
+    },
+    "RemoveAssetMaintenanceData": {
+        "data": {
+            "count": 1
+        },
+        "status": 200,
+        "message": "[Mock] Asset maintenance record removed successfully"
+    },
+    "MetricMaintenanceData": {
+        "data": {
+            "totalMaintenance": 100,
+            "resolvedIssues": 80,
+            "pendingIssues": 20
+        },
+        "status": 200,
+        "message": "[Mock] Asset maintenance metric readed successfully"
+    }
+}

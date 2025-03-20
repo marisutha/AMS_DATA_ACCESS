@@ -1,0 +1,55 @@
+Asset Management System Running Prerequisites
+                 
+Technology Requirements:
+
+    1.Node js
+    2.Microsoft Visual Studio Code 
+    3.PgAdmin 
+    4.PostgreSQL Server
+    5.Postman 
+    
+Steps to Run the Application:
+
+Step 1: Clone the repository or download the ZIP file.
+Step 2: Extract the ZIP file to the folder where you want to store the project.
+Step 3: 1) Open a command prompt in the project folder and run the command:
+         
+         * npm install(It may take a few minutes for the installation to complete.)
+         
+        2) Alternatively, open the project in Visual Studio Code, then open the terminal and run the command:
+        
+         * npm install (It may take a few minutes for the installation to complete.)
+    
+Step 4: Once the package installation is completed, configure and connect the PostgreSQL database using the credentials from the .env file:
+         
+         * DATABASE_URL = "postgresql://username:password@server:port/DatabaseName"
+         
+         postgresql   : Specifies the database system (PostgreSQL).
+         username     : The username for database authentication.
+         password     : The password for the given username.
+         server       : The server’s address (IP or domain).
+         port         : The port number (default is 5432).
+         DatabaseName : The name of the database to connect to.
+         
+Step 5: Next, run the following commands to generate the Prisma client and push the schema to the database:
+
+         * npx prisma generate
+         * npx prisma db push
+         
+Step 6: Once the schema is generated and pushed successfully, view all tables in PgAdmin.
+Step 7: Once everything is set up, run the application with the following command:
+
+	 * npm start
+	 
+Step 8: Once the server is running successfully, perform CRUD operations using Postman:
+
+Steps to use Postman:
+
+        * The Postman collection is stored in the project directory: docs/postman/Asset Management System.postman_collection.json.
+        * Open Postman, click on the "Import" button, select the file, or drag and drop the Postman collection.
+
+	 
+	 
+         
+
+

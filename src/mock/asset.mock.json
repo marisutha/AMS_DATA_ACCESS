@@ -1,0 +1,87 @@
+{
+    "CreateAssetData": {
+        "data": {
+            "AssetID": 1,
+            "AssetName": "Laptop",
+            "AssetCode": "ASSET123",
+            "SerialNumber": "SN123456",
+            "CategoryID": 1,
+            "Status": "Active",
+            "Model": "Dell Inspiron 15",
+            "LocationID": 2,
+            "CreatedBy": "admin",
+            "CreatedDate": "2023-11-03T05:52:49.864Z",
+            "IsDeleted": false
+        },
+        "status": 200,
+        "message": "[MOCK] Asset has been created successfully"
+    },
+    "ReadAssetData": {
+        "data": [
+            {
+                "AssetID": 123,
+                "AssetName": "Laptop",
+                "AssetCode": "ASSET123",
+                "SerialNumber": "SN123456",
+                "CategoryID": 1,
+                "Status": "Active",
+                "Model": "Dell Inspiron 15",
+                "LocationID": 2,
+                "CreatedBy": "admin",
+                "CreatedDate": "2023-11-03T05:52:49.864Z",
+                "IsDeleted": false,
+                "PurchaseDate": "2023-10-10T00:00:00.000Z",
+                "WarrantyExpiry": "2024-10-10T00:00:00.000Z",
+                "PreviousUser": "user1",
+                "Remark": "No remarks",
+                "ModifiedBy": "admin",
+                "ModifiedDate": "2023-12-01T00:00:00.000Z"
+            },
+            {
+                "AssetID": 200,
+                "AssetName": "Computer",
+                "AssetCode": "ASSET200",
+                "SerialNumber": "SN123453246",
+                "CategoryID": 1,
+                "Status": "Active",
+                "Model": "Lenovo 15",
+                "LocationID": 2,
+                "CreatedBy": "admin",
+                "CreatedDate": "2023-11-03T05:52:49.864Z",
+                "IsDeleted": false,
+                "PurchaseDate": "2023-10-10T00:00:00.000Z",
+                "WarrantyExpiry": "2024-10-10T00:00:00.000Z",
+                "PreviousUser": "user1",
+                "Remark": "No remarks",
+                "ModifiedBy": "admin",
+                "ModifiedDate": "2023-12-01T00:00:00.000Z"
+            }
+        ],
+        "status": 200,
+        "message": "[MOCK] Asset has been read successfully"
+    },
+    "UpdateAssetData": {
+        "data": {
+            "count": 1
+        },
+        "status": 200,
+        "message": "Asset updated successfully"
+    },
+    "RemoveAssetData": {
+        "data": {
+            "count": 1
+        },
+        "status": 200,
+        "message": "[MOCK] Asset has been removed successfully"
+    },
+    "MetricAssetData": {
+        "data": {
+            "total": 125,
+            "active": 75,
+            "inactive": 35,
+            "scraped": 15
+        },
+        "status": 200,
+        "message": "[MOCK] Asset Metric has been read successfully"
+    }
+}

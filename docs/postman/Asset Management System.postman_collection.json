@@ -1,0 +1,1907 @@
+{
+	"info": {
+		"_postman_id": "9b1b7ab7-444a-427a-827f-1773c6bc52a3",
+		"name": "Asset Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40560202"
+	},
+	"item": [
+		{
+			"name": "Asset",
+			"item": [
+				{
+					"name": "Read All Assets",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"filter\": { \"IsDeleted\": false},\n    \"fields\": {},\n    \"page\": 0,\n    \"limit\": 100,\n    \"sort\": {\n        \"CreatedDate\" : \"desc\"\n    }\n}\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/asset/read/assets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"asset",
+								"read",
+								"assets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Asset",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n    \"data\": {\n        \"AssetName\": \"System\",\n        \"AssetCode\": \"SYS002\",\n        \"Model\": \"Dell note 5\",\n        \"SerialNumber\": \"1123fgu895\",\n        \"CategoryID\": 1,\n        \"LocationID\": 1,\n        \"PurchaseDate\": \"2024-12-30T00:00:00.000Z\",\n        \"Status\": \"Active\",\n        \"CreatedBy\": \"Admin\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/asset/create/asset",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"asset",
+								"create",
+								"asset"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Asset",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"filter\": {\n    \"AssetID\": 4\n  },\n  \"fields\": {\n    \"UserID\": 1\n  }\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/asset/edit/asset",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"asset",
+								"edit",
+								"asset"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete asset",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/asset/delete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"asset",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Asset Metrics",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/asset/metric/assets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"asset",
+								"metric",
+								"assets"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n  \"data\": {\n    \"UserName\": \"New User3434\",\n    \"CreatedBy\": \"Admin\",\n    \"UserCode\": \"ES001305\",\n    \"DepartmentID\": 1,\n    \"LocationID\": 1,\n    \"JoiningDate\": \"2025-01-01T00:00:00.000Z\",\n    \"Status\": \"Active\"\n  }\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/create/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"create",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Users",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"filter\": {\n        \"IsDeleted\": false\n    },\n    \"fields\":{},  \n    \"page\": 0,\n    \"limit\": 1000,\n    \"sort\": {\n        \"CreatedDate\": \"desc\"\n    }\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/read/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"read",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read One User",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/user/read/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"read",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit User",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"filter\": {\n    \"UserID\": 2\n  },\n  \"fields\": {\n    \"IsDeleted\": false\n  }\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/edit/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"edit",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/user/delete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Metric",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/user/metric/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"metric",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Create Category",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"CategoryName\": \"Laptop\",\n        \"CategoryCode\":\"LAP1001\",\n        \"CreatedBy\": \"Admin\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/category/create/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								"create",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Category",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"filter\": {\n        \"IsDeleted\" : false\n    },\n    \"fields\": {},\n    \"page\": 0,\n    \"limit\": 100,\n    \"sort\": {\n        \"CreatedDate\": \"desc\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/category/read/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								"read",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Category",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"filter\": {\n        \"CategoryID\": 1\n    },\n    \"fields\": {\n        \"CategoryName\": \"Desktop\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/category/edit/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								"edit",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/category/delete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Category Metric",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/category/metric/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								"metric",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Department",
+			"item": [
+				{
+					"name": "Create Department",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"DepartmentName\": \"Testing\",\n        \"DepartmentCode\":\"QA\",\n        \"CreatedBy\": \"Admin\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/department/create/department",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"department",
+								"create",
+								"department"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read All Department",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"filter\": {\n        \"IsDeleted\" : false\n    },\n    \"fields\": {},\n    \"page\": 0,\n    \"limit\": 100,\n    \"sort\": {\n        \"CreatedDate\": \"desc\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/department/read/departments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"department",
+								"read",
+								"departments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Department",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"filter\": {\n    \"DepartmentID\": 2\n  },\n  \"fields\": {\n    \"IsDeleted\": false\n  }\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/department/edit/department",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"department",
+								"edit",
+								"department"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Department",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/department/delete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"department",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Metric Department",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/department/metric/departments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"department",
+								"metric",
+								"departments"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Location",
+			"item": [
+				{
+					"name": "Create Location",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"LocationName\": \"Chennai\",\n        \"LocationCode\":\"CHN\",\n        \"CreatedBy\": \"Admin\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/location/create/location",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"location",
+								"create",
+								"location"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read All Location",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"filter\": {\n        \"IsDeleted\" : false\n    },\n    \"fields\": {},\n    \"page\": 0,\n    \"limit\": 100,\n    \"sort\": {\n        \"CreatedDate\": \"desc\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/location/read/locations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"location",
+								"read",
+								"locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Location",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"filter\": {\n    \"LocationID\": 1\n  },\n  \"fields\": {\n    \"IsDeleted\": false\n  }\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/location/edit/location",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"location",
+								"edit",
+								"location"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Location",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/location/delete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"location",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Metric Location",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/location/metric/locations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"location",
+								"metric",
+								"locations"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AssetMaintenance",
+			"item": [
+				{
+					"name": "Create Asset Maintenance",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n\t\"data\": {\n\t\t\"AssetID\": 3,\n\t\t\"CreatedBy\": \"Admin\",\n\t\t\"Issue\": \"Over Heat\",\n\t\t\"StartDate\": \"2025-01-11T00:00:00.000Z\",\n\t\t\"Status\": \"New\",\n\t\t\"UserID\": 1\n\t}\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/maintenance/create/maintenance",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"maintenance",
+								"create",
+								"maintenance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read All Asset Maintenance",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"filter\": {\n        \"IsDeleted\" : false\n    },\n    \"fields\": {},\n    \"page\": 0,\n    \"limit\": 100,\n    \"sort\": {\n        \"CreatedDate\": \"desc\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/maintenance/read/maintenances",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"maintenance",
+								"read",
+								"maintenances"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Asset Maintenance",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"filter\": {\n    \"MaintenanceID\": 2\n  },\n  \"fields\": {\n    \"IsDeleted\": false\n  }\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/maintenance/edit/maintenance",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"maintenance",
+								"edit",
+								"maintenance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Asset Maintenance",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/maintenance/delete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"maintenance",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Maintenance Metric",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "0",
+									"value": {
+										"key": "password",
+										"value": "PO2392349MNJKW",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "1",
+									"value": {
+										"key": "username",
+										"value": "234LKJH823423",
+										"type": "string"
+									},
+									"type": "any"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/maintenance/metric/maintenances",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"maintenance",
+								"metric",
+								"maintenances"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

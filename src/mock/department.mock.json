@@ -1,0 +1,63 @@
+{
+    "CreateDepartmentData": {
+        "data": {
+            "DepartmentID": 1,
+            "DepartmentName": "IT",
+            "DepartmentCode": "DEP123",
+            "CreatedBy": "admin",
+            "CreatedDate": "2023-12-01T12:00:00Z",
+            "IsDeleted": false,
+            "ModifiedBy": null,
+            "ModifiedDate": null
+        },
+        "status": 200,
+        "message": "Department created successfully"
+    },
+    "ReadDepartmentData": {
+        "data": [
+            {
+                "DepartmentID": 1,
+                "DepartmentName": "IT",
+                "DepartmentCode": "DEP123",
+                "CreatedBy": "admin",
+                "CreatedDate": "2023-12-01T12:00:00Z",
+                "IsDeleted": false,
+                "ModifiedBy": null,
+                "ModifiedDate": null
+            },
+            {
+                "DepartmentID": 2,
+                "DepartmentName": "HR",
+                "DepartmentCode": "DEP456",
+                "CreatedBy": "admin",
+                "CreatedDate": "2023-12-01T12:00:00Z",
+                "IsDeleted": false,
+                "ModifiedBy": "user1",
+                "ModifiedDate": "2024-01-10T10:00:00Z"
+            }
+        ],
+        "status": 200,
+        "message": "Departments fetched successfully"
+    },
+    "UpdateDepartmentData": {
+        "data": {
+            "count": 1
+        },
+        "status": 200,
+        "message": "[Mock] Departments updated successfully"
+    },
+    "RemoveDepartmentData": {
+        "data": {
+            "count": 1
+        },
+        "status": 200,
+        "message": "[Mock] Departments removed successfully"
+    },
+    "MetricDepartmentData": {
+        "data": {
+            "TotalDepartment": 10
+        },
+        "status": 200,
+        "message": "[MOCK] Department Metric has been read successfully"
+    }
+}

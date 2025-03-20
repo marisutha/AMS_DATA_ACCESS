@@ -1,0 +1,91 @@
+{
+    "CreateUserData": {
+        "data": {
+            "UserID": 1,
+            "UserName": "Nalladurai",
+            "LocationID": 1,
+            "DepartmentID": 1,
+            "Status": "Active",
+            "Remark": null,
+            "CreatedBy": "admin",
+            "CreatedDate": "2023-12-01T12:00:00Z",
+            "IsDeleted": false,
+            "ModifiedBy": null,
+            "ModifiedDate": null
+        },
+        "status": 200,
+        "message": "[Mock] User created successfully"
+    },
+    "ReadUserData": {
+        "data": [
+            {
+                "UserID": 1,
+                "UserName": "Nalladurai",
+                "LocationID": 1,
+                "DepartmentID": 1,
+                "Status": "Active",
+                "Remark": null,
+                "CreatedBy": "admin",
+                "CreatedDate": "2023-12-01T12:00:00Z",
+                "IsDeleted": false,
+                "ModifiedBy": null,
+                "ModifiedDate": null
+            },
+            {
+                "UserID": 2,
+                "UserName": "Subash",
+                "LocationID": 2,
+                "DepartmentID": 2,
+                "Status": "Inactive",
+                "Remark": "On leave",
+                "CreatedBy": "user1",
+                "CreatedDate": "2024-01-01T08:00:00Z",
+                "IsDeleted": false,
+                "ModifiedBy": "admin",
+                "ModifiedDate": "2024-01-15T10:00:00Z"
+            }
+        ],
+        "status": 200,
+        "message": "[Mock] Users fetched successfully"
+    },
+    "ReadOneUserData": {
+        "data": {
+            "UserID": 1,
+            "UserName": "Nalladurai",
+            "LocationID": 1,
+            "DepartmentID": 1,
+            "Status": "Active",
+            "Remark": null,
+            "CreatedBy": "admin",
+            "CreatedDate": "2023-12-01T12:00:00Z",
+            "IsDeleted": false,
+            "ModifiedBy": null,
+            "ModifiedDate": null
+        },
+        "status": 200,
+        "message": "[Mock] User readed successfully"
+    },
+    "UpdateUserData": {
+        "data": {
+            "count": 1
+        },
+        "status": 200,
+        "message": "[Mock] Users updated successfully"
+    },
+    "RemoveUserData": {
+        "data": {
+            "count": 1
+        },
+        "status": 200,
+        "message": "[Mock] Users removed successfully"
+    },
+    "ReadUserMetric": {
+        "data": {
+            "totalUser": 125,
+            "activeUser": 75,
+            "inactiveUser": 35
+        },
+        "status": 200,
+        "message": "[Mock] User metric readed successfully"
+    }
+}
